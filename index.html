@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <link rel="icon" href="image/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="image/favicon.svg" type="image/svg+xml">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter">
+        <meta charset="utf-8">
+        <meta name="author" content="Adam Helins">
+        <meta name="description" content="Minimalistic software studio">
+        <title>Protosens SRL</title>
+    </head>
+    <style>
+      body {
+          background: rgb(30,30,30);
+          box-sizing: border-box;
+          color: rgb(200,200,200);
+          font-family: 'Inter', sans-serif;
+          font-size: 24px;
+          margin: 0;
+      }
+      p {
+          margin: 0;
+          padding-bottom: 0.25em;
+          padding-top: 0.25em;
+      }
+      .bar-top {
+          background-color: rgb(50,170,125);
+          height: 0.25em;
+          left: 0;
+          top: 0;
+          position: fixed;
+          width: 100%;
+          z-index: 1;
+      }
+      .bg-gradient {
+          background: repeating-linear-gradient(-35deg, rgb(50,170,125), rgb(50,145,160) 50px);
+          height: 100%;
+          left: 50%;
+          position: fixed;
+          transform: translateX(-50%);
+          top: 0;
+          width: 249px;
+      }
+      .chunk:last-child {
+          padding-bottom: 5em;
+      }
+      .filler {
+          background: rgb(30,30,30);
+          height: 33%;
+          position: relative;
+          width: 100%;
+      }
+      .info {
+          background-color: rgb(30,30,30);
+          max-width: 500px;
+          padding-top: 2em;
+      }
+      .logo {
+          display: block;
+          height: 250px;
+          left: 50%;
+          position: relative;
+          transform: translateX(-50%);
+          width: 250px;
+      }
+      .main {
+          height: 100%;
+          max-width: 500px;
+          left: 50%;
+          position: absolute;
+          text-align: center;
+          transform: translateX(-50%);
+      }
+      .spacer {
+          background-color: rgb(50,170,125);
+          height: 3px;
+          left: 50%;
+          margin-bottom: 1.75em;
+          margin-top: 1.75em;
+          position: relative;
+          transform: translateX(-50%);
+          width: 50%;
+      }
+      .title {
+        font-size: 1.5em;
+      }
+    </style>
+    <body>
+        <div class="bar-top"></div>
+        <div class="bg-gradient"></div>
+        <div class="main">
+            <div class="filler"></div>
+            <img class="logo" src="image/logo.svg"/>
+            <div class="info">
+                <div class="chunk">
+                    <p class="title" >Protosens SRL</p>
+                    <p>Founded by Adam Helins</p>
+                </div>
+                <div class="spacer"></div>
+                <div class="chunk">
+                    <p class="title">Minimalistic software studio</p>
+                    <p>Clojure ecosystem</p>
+                    <p>Decentralized technologies</p>
+                </div>
+                <div class="spacer"></div>
+                <div class="chunk">
+                    <p>contact@protosens.com</p>
+                </div>
+                <div class="chunk">
+                    <p>VAT-No: BE0782310245</p>
+                </div>
+                <div class="spacer"></div>
+                <div class="chunk">
+                    <p>27/102, rue de la Limite</p>
+                    <p>1340 Ottignies-Louvain-la-Neuve</p>
+                    <p>Belgium</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
