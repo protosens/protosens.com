@@ -10,6 +10,9 @@
         <title>Protosens SRL</title>
     </head>
     <style>
+      a {
+          color: transparent;
+      }
       body {
           background: rgb(30,30,30);
           box-sizing: border-box;
@@ -71,6 +74,16 @@
           text-align: center;
           transform: translateX(-50%);
       }
+      .social {
+          background-color: rgb(30,30,30);
+          padding-top: 3em;
+      }
+      .social-icon {
+          height: 2em;
+          padding-left: 0.75em;
+          padding-right: 0.75em;
+          width: 2em;
+      }
       .spacer {
           background-color: rgb(50,170,125);
           height: 3px;
@@ -90,7 +103,18 @@
         <div class="bg-gradient"></div>
         <div class="main">
             <div class="filler"></div>
-            <img class="logo" src="image/logo.svg"/>
+            <img alt="Protosens logo" class="logo" src="image/logo.svg"/>
+            <div class="social">
+                <a href="https://twitter.com/adamhelins" target="_blank">
+                    <img alt="Go to Twitter" class="social-icon" src="image/twitter.svg"/>
+                </a>
+                <a href="https://github.com/helins" target="_blank">
+                    <img alt="Go to Github" class="social-icon" src="image/github.png"/>
+                </a>
+                <a href="https://www.linkedin.com/in/adam-helins" target="_blank">
+                    <img alt="Go to LinkedIn" class="social-icon" src="image/linkedin.png">
+                </a>
+            </div>
             <div class="info">
                 <div class="chunk">
                     <p class="title" >Protosens SRL</p>
