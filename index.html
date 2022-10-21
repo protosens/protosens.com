@@ -3,147 +3,156 @@
     <head>
         <link rel="icon" href="image/favicon.ico" type="image/x-icon">
         <link rel="icon" href="image/favicon.svg" type="image/svg+xml">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
         <meta charset="utf-8">
         <meta name="author" content="Adam Helins">
         <meta name="description" content="Minimalistic software studio">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Protosens SRL</title>
     </head>
+
+
     <style>
       a {
           color: transparent;
+          text-decoration: none;
       }
       body {
           background: rgb(30,30,30);
           box-sizing: border-box;
           color: rgb(200,200,200);
-          font-family: 'Inter', sans-serif;
-          font-size: 24px;
+          font-family: 'Press Start 2P', cursive;
+          font-size: 18px;
           margin: 0;
       }
       p {
-          margin: 0;
-          padding-bottom: 0.25em;
-          padding-top: 0.25em;
+          color: rgb(200,200,200);
       }
-      .bar-top {
-          background-color: rgb(50,170,125);
-          height: 0.25em;
-          left: 0;
-          top: 0;
-          position: fixed;
-          width: 100%;
-          z-index: 1;
+      .email:hover, .link:hover {
+          color: #00F19A;
       }
-      .bg-gradient {
-          background: repeating-linear-gradient(-35deg, rgb(50,170,125), rgb(50,145,160) 50px);
-          height: 100%;
-          left: 50%;
-          position: fixed;
-          transform: translateX(-50%);
-          top: 0;
-          width: 249px;
-      }
-      .filler {
-          background: rgb(30,30,30);
-          height: 33%;
-          position: relative;
-          width: 100%;
-      }
-      .info {
-          background-color: rgb(30,30,30);
-          max-width: 500px;
-          padding-top: 2em;
-      }
-      .logo {
-          display: block;
-          height: 250px;
-          left: 50%;
-          position: relative;
-          transform: translateX(-50%);
-          width: 250px;
+      .link {
+          color: #34abeb;
       }
       .main {
           height: 100%;
-          max-width: 500px;
           left: 50%;
+          max-width: 500px;
+          min-width: 50%;
           position: absolute;
-          text-align: center;
           transform: translateX(-50%);
       }
-      .qr-code {
-          height: 250px;
-          padding-bottom: 4em;
-          padding-top: 2em;
-          width: 250px;
+      .logo {
+          height: 80vh;
+          left: 50vw;
+          position: fixed;
+          top: calc(50vh - 3em);
+          width: 80vw;
       }
-      .social {
+      .logo-container {
+          background-color: #bce2d4;
+          background-image:  linear-gradient(#1e1e1e 4.4px, transparent 4.4px), linear-gradient(90deg, #1e1e1e 4.4px, transparent 4.4px), linear-gradient(#1e1e1e 2.2px, transparent 2.2px), linear-gradient(90deg, #1e1e1e 2.2px, #bce2d4 2.2px);
+          background-position: -4.4px -4.4px, -4.4px -4.4px, -2.2px -2.2px, -2.2px -2.2px;
+          background-size: 110px 110px, 110px 110px, 22px 22px, 22px 22px;
+          height: 100%;
+          position: fixed;
+          width: 100%;
+      }
+      .logo-shadow {
+          animation: logo-shadow 7s forwards ease-out, logo-breath 10s linear 4s infinite;
+          clip-path: circle(0%);
+          transform-origin: -12.5% -12.5%;
+          transform: scale(0.8) translate(-50%, -50%);
+      }
+      @keyframes logo-shadow {
+          50% {
+              transform: scale(1) translate(-50%, -50%);
+          }
+          100% {
+              clip-path: circle(50%);
+              transform: scale(1) translate(-50%, -50%);
+          }
+      }
+      @keyframes logo-breath {
+          50% {
+              transform: scale(1.065) translate(-50%, -50%);
+          }
+      }
+      .logo-top {
+          clip-path: inset(100% 0 0 0);
+          animation: logo-beat 10s ease-out 4.250s infinite;
+          transform: translate(-49%, -51%);
+      }
+      @keyframes logo-beat {
+          0% {
+              clip-path: circle(0%);
+          }
+          10% {
+              clip-path: circle(50%);
+          }
+          100% {
+              clip-path: circle(50%);
+          }
+      }
+      .page {
           background-color: rgb(30,30,30);
-          padding-top: 3em;
+          position: absolute;
+          width: 100%;
+          min-height: 100%;
+          top: calc( 100% - 9em );
+          padding-top: 3.5em;
+          clip-path: polygon(50% 3em, 100% 0, 100% 100%, 0 100%, 0 0);
       }
-      .social-icon {
-          height: 2em;
-          padding-left: 0.75em;
-          padding-right: 0.75em;
-          width: 2em;
+      .page-container {
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+      }
+      .page-header {
+          background-color: rgba(30,30,30,0.5);
+          position: absolute;
+          width: 100%;
+          height: 9.5em;
+          top: calc( 100% - 9.5em );
+          clip-path: polygon(50% 3em, 100% 0, 100% 100%, 0 100%, 0 0);
       }
       .spacer {
-          background-color: rgb(50,170,125);
-          height: 1px;
-          left: 50%;
-          margin-bottom: 1.75em;
-          margin-top: 1.75em;
-          position: relative;
-          transform: translateX(-50%);
-          width: 50%;
+          padding-top: 1em;
+          padding-bottom: 1em;
+          text-align: center;
       }
       .title {
-        font-size: 1.5em;
+          color: #00F19A;
+          font-weight: bold;
+      }
+
+      .title-container {
+          text-align: center;
       }
     </style>
+
+
     <body>
-        <div class="bar-top"></div>
-        <div class="bg-gradient"></div>
-        <div class="main">
-            <div class="filler"></div>
-            <img alt="Protosens logo" class="logo" src="image/logo.svg"/>
-            <div class="social">
-                <a href="https://twitter.com/adamhelins" target="_blank">
-                    <img alt="Go to Twitter" class="social-icon" src="image/twitter.svg"/>
-                </a>
-                <a href="https://github.com/helins" target="_blank">
-                    <img alt="Go to Github" class="social-icon" src="image/github.png"/>
-                </a>
-                <a href="https://www.linkedin.com/in/adam-helins" target="_blank">
-                    <img alt="Go to LinkedIn" class="social-icon" src="image/linkedin.png">
-                </a>
-            </div>
-            <div class="info">
-                <div class="chunk">
-                    <p class="title" >Protosens SRL</p>
-                    <p>Founded by Adam Helins</p>
+        <div class="logo-container"></div>
+        <img alt="Protosens logo" class="logo logo-shadow" src="image/logo/shadow.svg"/>
+        <img alt="Protosens logo - Green" class="logo logo-top" src="image/logo/top.svg"/>
+        <div class="page-header"></div>
+        <div class="page">
+            <div class="page-container">
+                <div class="title-container">
+                    <p class="title">Protosens SRL</p>
+                    <p>Software studio</p>
                 </div>
-                <div class="spacer"></div>
-                <div class="chunk">
-                    <p class="title">Minimalistic software studio</p>
-                    <p>Clojure ecosystem</p>
-                    <p>Decentralized technologies</p>
-                </div>
-                <div class="spacer"></div>
-                <div class="chunk">
-                    <p>contact@protosens.com</p>
-                </div>
-                <div class="chunk">
-                    <p>VAT-No: BE0782310245</p>
-                </div>
-                <div class="spacer"></div>
-                <div class="chunk">
-                    <p>27/102, rue de la Limite</p>
-                    <p>1340 Ottignies-Louvain-la-Neuve</p>
-                    <p>Belgium</p>
-                </div>
-                <img class="qr-code" src="image/qr_code.svg"/>
+                <div class="spacer">---</div>
+                <p>Vat-No: BE0782310245</p>
+                <div class="spacer">---</div>
+                <a href="mailto:contact@protosens.com"><p class="email">contact@protosens.com</p></a>
+                <div class="spacer">---</div>
+                <a href="https://github.com/protosens" target="_blank" rel="noopener noreferrer"><p class="link">Github</p></a>
+                <a href="https://www.linkedin.com/company/protosens" target="_blank" rel="noopener noreferrer"><p class="link">Linkedin</p></a>
+                <a href="https://twitter.com/protosens" target="_blank" rel="noopener noreferrer"><p class="link">Twitter</p></a>
             </div>
         </div>
     </body>
