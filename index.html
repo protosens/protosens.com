@@ -40,14 +40,6 @@
       .link {
           color: #34abeb;
       }
-      .main {
-          height: 100%;
-          left: 50%;
-          max-width: 500px;
-          min-width: 50%;
-          position: absolute;
-          transform: translateX(-50%);
-      }
       .logo {
           height: 80vh;
           left: 50vw;
@@ -56,16 +48,30 @@
           width: 80vw;
       }
       .logo-container {
+          animation: logo-container 1s forwards ease-in;
           background-color: #bce2d4;
           background-image:  linear-gradient(#1e1e1e 4.4px, transparent 4.4px), linear-gradient(90deg, #1e1e1e 4.4px, transparent 4.4px), linear-gradient(#1e1e1e 2.2px, transparent 2.2px), linear-gradient(90deg, #1e1e1e 2.2px, #bce2d4 2.2px);
           background-position: -4.4px -4.4px, -4.4px -4.4px, -2.2px -2.2px, -2.2px -2.2px;
           background-size: 110px 110px, 110px 110px, 22px 22px, 22px 22px;
-          height: calc(100% - 6em);
+          height: calc(75vh - 6em);
+          left: 50vw;
+          min-width: 500px;
+          opacity: 0.25;
           position: fixed;
-          width: 100%;
+          top: 25vh;
+          transform: translateX(-50%);
+          width: 50vw;
+      }
+      @keyframes logo-container {
+          0% {
+              clip-path: inset(100% 0 0 0);
+          }
+          100% {
+              clip-path: inset(0 0 0 0);
+          }
       }
       .logo-shadow {
-          animation: logo-shadow 7s forwards ease-out, logo-breath 10s linear 4s infinite;
+          animation: logo-shadow 7s forwards ease-out 0.750s, logo-breath 8s linear 4.750s infinite;
           clip-path: circle(0%);
           transform-origin: -12.5% -12.5%;
           transform: scale(0.8) translate(-50%, -50%);
@@ -86,7 +92,7 @@
       }
       .logo-top {
           clip-path: inset(100% 0 0 0);
-          animation: logo-beat 10s ease-out 4.250s infinite;
+          animation: logo-beat 8s ease-out 4.750s infinite;
           transform: translate(-49%, -51%);
       }
       @keyframes logo-beat {
