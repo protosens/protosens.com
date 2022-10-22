@@ -37,18 +37,8 @@
       .email:hover, .link:hover {
           color: #00F19A;
       }
-      .link {
-          color: #34abeb;
-      }
-      .logo {
-          height: 80vh;
-          left: 50vw;
-          position: fixed;
-          top: calc(50vh - 2em);
-          width: 80vw;
-      }
-      .logo-container {
-          animation: logo-container 1s forwards ease-in;
+      .grid {
+          animation: grid 1s forwards ease-in;
           background-color: #bce2d4;
           background-image:  linear-gradient(#1e1e1e 4.4px, transparent 4.4px), linear-gradient(90deg, #1e1e1e 4.4px, transparent 4.4px), linear-gradient(#1e1e1e 2.2px, transparent 2.2px), linear-gradient(90deg, #1e1e1e 2.2px, #bce2d4 2.2px);
           background-position: -4.4px -4.4px, -4.4px -4.4px, -2.2px -2.2px, -2.2px -2.2px;
@@ -62,7 +52,7 @@
           transform: translateX(-50%);
           width: 50vw;
       }
-      @keyframes logo-container {
+      @keyframes grid {
           0% {
               clip-path: inset(100% 0 0 0);
           }
@@ -70,30 +60,40 @@
               clip-path: inset(0 0 0 0);
           }
       }
+      .link {
+          color: #34abeb;
+      }
+      .logo {
+          height: 80vh;
+          left: 50vw;
+          position: fixed;
+          top: calc(50vh - 2em);
+          width: 80vw;
+      }
       .logo-shadow {
           animation: logo-shadow 7s forwards ease-out 0.750s, logo-breath 8s linear 4.750s infinite;
           clip-path: circle(0%);
           transform-origin: -12.5% -12.5%;
-          transform: scale(0.8) translate(-50%, -50%);
+          transform: scale(0.8) translate(-51%, -49%);
       }
       @keyframes logo-shadow {
           50% {
-              transform: scale(1) translate(-50%, -50%);
+              transform: scale(1) translate(-51%, -49%);
           }
           100% {
               clip-path: circle(50%);
-              transform: scale(1) translate(-50%, -50%);
+              transform: scale(1) translate(-51%, -49%);
           }
       }
       @keyframes logo-breath {
           50% {
-              transform: scale(1.065) translate(-50%, -50%);
+              transform: translate(-53%, -48%);
           }
       }
       .logo-top {
           clip-path: inset(100% 0 0 0);
           animation: logo-beat 8s ease-out 4.750s infinite;
-          transform: translate(-49%, -51%);
+          transform: translate(-50%, -50%);
       }
       @keyframes logo-beat {
           0% {
@@ -108,7 +108,7 @@
       }
       .page {
           background-color: rgb(30,30,30);
-          clip-path: polygon(50% 3em, 100% 0, 100% 100%, 0 100%, 0 0);
+          clip-path: polygon(50% 3rem, 100% 0, 100% 100%, 0 100%, 0 0);
           padding-top: 3.5em;
           position: relative;
           top: calc(100% - 9em);
@@ -125,11 +125,11 @@
       }
       .page-header {
           background-color: rgba(30,30,30,0.5);
+          clip-path: polygon(50% 3rem, 100% 0, 100% 100%, 0 100%, 0 0);
           position: absolute;
           width: 100%;
           height: 9.5em;
           top: calc( 100% - 9.5em );
-          clip-path: polygon(50% 3em, 100% 0, 100% 100%, 0 100%, 0 0);
       }
       .spacer {
           padding-top: 1em;
@@ -144,7 +144,7 @@
 
 
     <body>
-        <div class="logo-container"></div>
+        <div class="grid"></div>
         <img alt="Protosens logo" class="logo logo-shadow" src="image/logo/shadow.svg"/>
         <img alt="Protosens logo - Green" class="logo logo-top" src="image/logo/top.svg"/>
         <div class="page-header"></div>
@@ -158,7 +158,7 @@
                 <a href="mailto:contact@protosens.com"><p class="email">contact@protosens.com</p></a>
                 <div class="spacer">---</div>
                 <a href="https://github.com/protosens" target="_blank" rel="noopener noreferrer"><p class="link">Github</p></a>
-                <a href="https://www.linkedin.com/company/protosens" target="_blank" rel="noopener noreferrer"><p class="link">Linkedin</p></a>
+                <a href="https://www.linkedin.com/company/protosens" target="_blank" rel="noopener noreferrer"><p class="link">LinkedIn</p></a>
                 <a href="https://twitter.com/protosens" target="_blank" rel="noopener noreferrer"><p class="link">Twitter</p></a>
             </div>
         </div>
