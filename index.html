@@ -91,19 +91,38 @@
           }
       }
       .logo-top {
-          clip-path: inset(100% 0 0 0);
-          animation: logo-beat 8s ease-out 4.750s infinite;
+          clip-path: circle(0%);
+          animation: logo-beat 16s ease-out 4.750s infinite;
           transform: translate(-50%, -50%);
       }
       @keyframes logo-beat {
           0% {
               clip-path: circle(0%);
           }
-          10% {
+          5% {
               clip-path: circle(50%);
           }
           100% {
               clip-path: circle(50%);
+          }
+      }
+      .noise {
+          animation: noise 8s linear 7s infinite;
+          background: rgb(30, 30, 30);
+          height: 0.2rem;
+          left: 0;
+          position: fixed;
+          width: 100vw;
+      }
+      @keyframes noise {
+          0% {
+              top: 0;
+          }
+          25% {
+              top: 100vh;
+          }
+          100% {
+              top: 100vh;
           }
       }
       .page {
@@ -145,6 +164,7 @@
 
     <body>
         <div class="grid"></div>
+        <div class="noise"></div>
         <img alt="Protosens logo" class="logo logo-shadow" src="image/logo/shadow.svg"/>
         <img alt="Protosens logo - Green" class="logo logo-top" src="image/logo/top.svg"/>
         <div class="page-header"></div>
