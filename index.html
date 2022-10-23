@@ -19,45 +19,48 @@
           text-decoration: none;
       }
       body {
-          background: rgb(30,30,30);
+          background-color: rgb(250,250,250);
           box-sizing: border-box;
-          color: rgb(200,200,200);
+          color: white;
           font-family: 'Press Start 2P', cursive;
           font-size: 18px;
           margin: 0;
+          overflow-x: hidden;
           position: absolute;
-          height: 100%;
-          width: 100%;
+          height: 100vh;
+          width: 100vw;
       }
       p {
-          color: rgb(200,200,200);
-          text-align: center;
+          color: rgb(240,240,240);
+          text-align: left;
+      }
+      .bg {
+          animation: bg 2s forwards ease-out;
+          background: center/cover url("image/bg.png");
+          height: 100vh;
+          left: 50vw;
+          opacity: 0;
+          position: fixed;
+          top: 0;
+          transform: translateX(-50%);
+          width: 100vw;
+      }
+      @keyframes bg {
+          100% {
+              opacity: 1;
+          }
       }
       .email:hover, .link:hover {
           color: #00F19A;
       }
-      .grid {
-          animation: grid 1s forwards ease-in;
-          background-color: #bce2d4;
-          background-image:  linear-gradient(#1e1e1e 4.4px, transparent 4.4px), linear-gradient(90deg, #1e1e1e 4.4px, transparent 4.4px), linear-gradient(#1e1e1e 2.2px, transparent 2.2px), linear-gradient(90deg, #1e1e1e 2.2px, #bce2d4 2.2px);
-          background-position: -4.4px -4.4px, -4.4px -4.4px, -2.2px -2.2px, -2.2px -2.2px;
-          background-size: 110px 110px, 110px 110px, 22px 22px, 22px 22px;
-          height: calc(75vh - 6em);
-          left: 50vw;
-          min-width: 500px;
-          opacity: 0.25;
+      .fade {
           position: fixed;
-          top: 25vh;
-          transform: translateX(-50%);
-          width: 50vw;
-      }
-      @keyframes grid {
-          0% {
-              clip-path: inset(100% 0 0 0);
-          }
-          100% {
-              clip-path: inset(0 0 0 0);
-          }
+          top: 0;
+          left: 0;
+          width: 100vw;
+          height: 100vh;
+          background: linear-gradient(5deg, transparent, rgb(250,250,250));
+
       }
       .link {
           color: #34abeb;
@@ -106,18 +109,19 @@
           }
       }
       .noise {
-          animation: noise 8s linear 7s infinite;
-          background: rgb(30, 30, 30);
-          height: 0.2rem;
+          animation: noise 6s linear 7s infinite;
+          background-color: rgb(15, 15, 15);
+          height: 0.1rem;
           left: 0;
           position: fixed;
+          top: -1rem;
           width: 100vw;
       }
       @keyframes noise {
           0% {
               top: 0;
           }
-          25% {
+          35% {
               top: 100vh;
           }
           100% {
@@ -125,11 +129,12 @@
           }
       }
       .page {
-          background-color: rgb(30,30,30);
-          clip-path: polygon(50% 3rem, 100% 0, 100% 100%, 0 100%, 0 0);
-          padding-top: 3.5em;
+          background-color: rgba(15,55,55,0.70);
+          backdrop-filter: invert(0.8) sepia(1);
+          -webkit-backdrop-filter: invert(0.8) sepia(1);
+          clip-path: polygon(0 0, 100% 30vh, 100% 100%, 0% 100%);
           position: relative;
-          top: calc(100% - 9em);
+          top: 50vh;
           width: 100%;
       }
       .page-container {
@@ -138,6 +143,7 @@
           padding-bottom: 2em;
           padding-left: 0.5em;
           padding-right: 0.5em;
+          padding-top: calc( calc(50vh - 8rem) - env(safe-area-inset-bottom));
           position: relative;
           transform: translateX(-50%);
       }
@@ -152,25 +158,28 @@
       .spacer {
           padding-top: 1em;
           padding-bottom: 1em;
-          text-align: center;
+          color: rgb(24,41,46);
+          color: rgb(0,50,50);
       }
       .title {
-          color: #00BD90;
+          color: rgb(0,222,169);
+          font-size: 2rem;
           font-weight: bold;
       }
     </style>
 
 
     <body>
-        <div class="grid"></div>
+        <div class="bg"></div>
         <div class="noise"></div>
+        <div class="fade"></div>
         <img alt="Protosens logo" class="logo logo-shadow" src="image/logo/shadow.svg"/>
         <img alt="Protosens logo - Green" class="logo logo-top" src="image/logo/top.svg"/>
-        <div class="page-header"></div>
+        <!-- <div class="page-header"></div> -->
         <div class="page">
             <div class="page-container">
                 <p class="title">Protosens SRL</p>
-                <p>Software studio</p>
+                <p>Minimalistic software</p>
                 <div class="spacer">---</div>
                 <p>Vat-No: BE0782310245</p>
                 <div class="spacer">---</div>
