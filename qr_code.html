@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <link rel="icon" href="image/favicon.svg" type="image/svg+xml">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+        <meta charset="utf-8">
+        <meta name="author" content="Adam Helins">
+        <meta name="description" content="Minimalistic software studio">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+        <title>Protosens SRL</title>
+    </head>
+
+
+    <style>
+      body {
+          background-color: rgb(49,65,59);
+          box-sizing: border-box;
+          font-family: 'Press Start 2P', cursive;
+          font-size: 18px;
+          margin: 0;
+          overflow-x: hidden;
+          position: absolute;
+          height: 100vh;
+          width: 100vw;
+      }
+      .bg {
+          background: center/cover url("image/bg.png");
+          height: 100vh;
+          left: 50vw;
+          position: fixed;
+          top: 0;
+          transform: translateX(-50%);
+          width: 100vw;
+      }
+      .qr-code {
+          display: block;
+          height: 80vh;
+          left: 50vw;
+          position: fixed;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          width: 80vw;
+      }
+      .noise {
+          animation: noise 6s linear 2s infinite;
+          background-color: rgb(15, 15, 15);
+          height: 0.1rem;
+          left: 0;
+          position: fixed;
+          top: -1rem;
+          width: 100vw;
+      }
+      @keyframes noise {
+          0% {
+              top: 0;
+          }
+          35% {
+              top: 100vh;
+          }
+          100% {
+              top: 100vh;
+          }
+      }
+      .page {
+          background-color: rgba(15,55,55,0.70);
+          backdrop-filter: invert(0.8) sepia(1);
+          -webkit-backdrop-filter: invert(0.8) sepia(1);
+          height: 100vh;
+          left: 0;
+          position: relative;
+          top: 0;
+          width: 100vw;
+      }
+    </style>
+
+
+    <body>
+        <div class="bg"></div>
+        <div class="noise"></div>
+        <img alt="QR code for the website" class="qr-code" src="image/qr_code.svg"/>
+        <a href="index.html">
+            <div class="page"></div>
+        </a>
+    </body>
+</html>

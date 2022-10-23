@@ -8,7 +8,7 @@
         <meta charset="utf-8">
         <meta name="author" content="Adam Helins">
         <meta name="description" content="Minimalistic software studio">
-        <meta name="viewport" content="initial-scale=1, viewport-fit=cover, width=device-width">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
         <title>Protosens SRL</title>
     </head>
 
@@ -24,10 +24,10 @@
           color: white;
           font-family: 'Press Start 2P', cursive;
           font-size: 18px;
+          height: 100vh;
           margin: 0;
           overflow-x: hidden;
           position: absolute;
-          height: 100vh;
           width: 100vw;
       }
       p {
@@ -40,11 +40,10 @@
           animation: bg 2s forwards ease-out;
           background: center/cover url("image/bg.png");
           height: 100vh;
-          left: 50vw;
+          left: 0;
           opacity: 0;
           position: fixed;
           top: 0;
-          transform: translateX(-50%);
           width: 100vw;
       }
       @keyframes bg {
@@ -137,7 +136,7 @@
           clip-path: polygon(0 0, 100% 30vh, 100% 100%, 0% 100%);
           position: relative;
           top: 50vh;
-          width: 100%;
+          width: 100vw;
       }
       .page-container {
           left: 25%;
@@ -149,14 +148,6 @@
           position: relative;
           transform: translateX(-25%);
       }
-      .page-header {
-          background-color: rgba(30,30,30,0.5);
-          clip-path: polygon(50% 3rem, 100% 0, 100% 100%, 0 100%, 0 0);
-          position: absolute;
-          width: 100%;
-          height: 9.5em;
-          top: calc( 100% - 9.5em );
-      }
       .spacer {
           margin-bottom: 2em;
           margin-top: 2em;
@@ -167,7 +158,9 @@
           color: rgb(0,222,169);
           font-size: 2rem;
           font-weight: bold;
-          //margin-top: calc( -1 * env(safe-area-inset-bottom));
+      }
+      .title {
+          cursor: default;
       }
     </style>
 
@@ -180,7 +173,7 @@
         <img alt="Protosens logo - Green" class="logo logo-top" src="image/logo/top.svg"/>
         <div class="page">
             <div class="page-container">
-                <p class="title">Protosens SRL</p>
+                <a href="qr_code.html"><p class="title">Protosens SRL</p></a>
                 <p>Minimalistic software</p>
                 <div class="spacer">---</div>
                 <p>Vat-No: BE0782310245</p>
